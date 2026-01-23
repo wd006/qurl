@@ -1,0 +1,22 @@
+{
+  "name": "qurl",
+  "version": "0.0.1",
+  "description": "A privacy-focused, fast, and secure URL shortening and management service.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "release": "standard-version"
+  },
+  "keywords": [
+    "url-shortener",
+    "link-manager",
+    "url",
+    "qurl",
+    "wd006"
+  ],
+  "author": "wd006",
+  "license": "AGPL-3.0-only",
+  "devDependencies": {
+    "standard-version": "^9.5.0"
+  }
+}
