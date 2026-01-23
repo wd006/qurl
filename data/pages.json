@@ -1,0 +1,114 @@
+{
+    "pages": [
+        {
+            "title": "Home Page",
+            "header": "",
+            "description": "",
+            "url": "/",
+            "url_aliases": [ "/home", "/index" ],
+            "file": "/views/pages/home.php",
+            "controller": "/src/controllers/home.php",
+            "layout": "default",
+            "order": 1
+        },
+        {
+            "title": "About",
+            "header": "About Our Service",
+            "description": "",
+            "url": "/about",
+            "url_aliases": [],
+            "file": "/views/pages/about.php",
+            "controller": null,
+            "layout": "default",
+            "order": 2
+        },
+        {
+            "title": "Contact",
+            "header": "Contact Us",
+            "description": "",
+            "url": "/contact",
+            "url_aliases": [],
+            "file": "/placeholder.txt",
+            "controller": null,
+            "layout": "default",
+            "order": 3
+        },
+        {
+            "title": "Data Providers",
+            "header": "Our Security Data Providers",
+            "description": "",
+            "url": "/providers",
+            "url_aliases": [],
+            "file": "/placeholder.txt",
+            "controller": null,
+            "layout": "default",
+            "order": 4
+        },
+        {
+            "title": "FAQ",
+            "header": "Frequently Asked Questions (FAQ)",
+            "description": "",
+            "url": "/faq",
+            "url_aliases": [],
+            "file": "/placeholder.txt",
+            "controller": null,
+            "layout": "default",
+            "order": 5
+        },
+        {
+            "title": "Our Domains",
+            "header": "Our Official Domains",
+            "description": "",
+            "url": "/domains",
+            "url_aliases": [],
+            "file": "/placeholder.txt",
+            "controller": null,
+            "layout": "default",
+            "order": 6
+        },
+        {
+            "title": "Privacy",
+            "header": "Privacy Policy",
+            "description": "",
+            "url": "/privacy",
+            "url_aliases": [],
+            "file": "/placeholder.txt",
+            "controller": null,
+            "layout": "default",
+            "order": 7
+        },
+        {
+            "title": "Terms",
+            "header": "Terms of Service",
+            "description": "",
+            "url": "/terms",
+            "url_aliases": [],
+            "file": "/placeholder.txt",
+            "controller": null,
+            "layout": "default",
+            "order": 8
+        },
+        {
+            "title": "Services",
+            "header": "Our Services",
+            "description": "",
+            "url": "/services",
+            "url_aliases": [],
+            "file": "/placeholder.txt",
+            "controller": null,
+            "layout": "default",
+            "order": 9
+        },
+        {
+            "title": "Blog",
+            "header": "Blogs",
+            "description": "",
+            "url": "/blog",
+            "url_aliases": [],
+            "file": "/placeholder.txt",
+            "controller": null,
+            "layout": "default",
+            "order": 10
+        }
+    ]
+}
