@@ -1,0 +1,27 @@
+# nodejs
+/node_modules
+
+# private config
+.env
+
+# sqlite db
+*.db
+*.db-journal
+
+# os
+.DS_Store
+Thumbs.db
+
+# logs
+*.log
+npm-debug.log*
+
+# ide
+.vscode/
+.idea/
+
+# others
+/.old/
+/.test/
+.notes
+/debugs/
