@@ -1,0 +1,38 @@
+### ====== Options ====== ###
+DirectoryIndex index.php
+Options +FollowSymLinks -MultiViews -Indexes
+### ======================== ###
+
+
+### ====== Rewrite Engine ====== ###
+RewriteEngine On
+RewriteBase /
+### ======================== ###
+
+
+### ====== Clear Parameters ====== ###
+RewriteCond %{QUERY_STRING} ^i=[^&]+&?(.*)$ [NC]
+RewriteRule ^ %{REQUEST_URI}?%1 [R=301,L]
+
+RewriteCond %{QUERY_STRING} ^(.*)&i=[^&]+(.*)$ [NC]
+RewriteRule ^ %{REQUEST_URI}?%1%2 [R=301,L]
+### ======================== ###
+
+
+### ====== HTTPS Force ====== ###
+RewriteCond %{HTTP:X-Forwarded-Proto} !https
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP:CF-Visitor} !{"scheme":"https"}
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+### ======================== ###
+
+
+### ====== Main Router ====== ###
+# RewriteRule ^style\.css$ - [L]
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+RewriteRule ^(.*)$ index.php [QSA,L,B]
+### ======================== ###
+
+
