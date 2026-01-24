@@ -12,5 +12,6 @@
     <a href="/"><img src="https://img.shields.io/badge/🔗 qURL-URL%20Shortener-blue.svg?&logoColor=white&style=for-the-badge"></img></a>
 </footer>
 <script src="/assets/js/ssl-toggle.js"></script>
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 </body>
 </html> <?php //<!--(c)--> ?>
