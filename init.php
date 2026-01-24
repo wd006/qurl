@@ -15,6 +15,10 @@ if (file_exists(ROOTDIR . '/src/helpers/functions.php')) {
     require_once ROOTDIR . '/src/helpers/functions.php';
 }
 
+// .env variables
+loadEnv(ROOTDIR . '/.env');
+
+
 // AUTOLOADER
 spl_autoload_register(function ($className) {
     // Class Request -> Request.php
