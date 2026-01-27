@@ -2,6 +2,28 @@
 
 class Shortlink
 {
+    protected function slugify($text, $divider = '-')
+    {
+        $text = mb_convert_encoding($text, 'UTF-8', mb_detect_encoding($text));
+
+        if (function_exists('iconv')) {
+            $text = iconv('UTF-8', 'ASCII//TRANSLIT//IGNORE', $text);
+        }
+
+        $text = strtolower($text);
+
+        $text = preg_replace('/[^a-z0-9]+/', $divider, $text);
+
+        $text = trim($text, $divider);
+
+        if (empty($text)) {
+            return null;
+        }
+
+        return $text;
+    }
+
+    
     protected function formatUrl(string $rawUrl, bool $useHttps): string
     {
         $domain = preg_replace('#^https?://#i', '', trim($rawUrl));
