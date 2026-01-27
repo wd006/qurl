@@ -3,6 +3,75 @@
 class Shortlink
 {
 
+    public function create(array $input)
+    {
+
+        $target_url = trim($input['long_url'] ?? '');
+        $shortname = trim($input['custom_shortname'] ?? '');
+        $domain_id = $input['domain_id'] ?? 0;
+
+
+        $settings = $input['settings'] ?? [];
+        $settings['use_https'] = $settings['use_https'] ?? false;
+
+
+        $admin = $input['admin'] ?? [];
+        $admin['enabled'] = $admin['enabled'] ?? false;
+        $admin['password'] = Security::hasher($admin['password']) ?? null;
+
+
+        $protection = $input['protection'] ?? [];
+        $protection['enabled'] = $protection['enabled'] ?? false;
+        $protection['password'] = Security::hasher($protection['password']) ?? null;
+
+
+        $preview = $input['preview'] ?? [];
+        $preview['enabled'] = $preview['enabled'] ?? false;
+        $preview['note'] = $preview['note'] ?? null;
+
+
+
+        if (empty($target_url)) {
+            echo Response::error(400, "Missing Parameter", "Long URL can't be blank.");
+        }
+
+        if (!$target_url = $this->formatUrl($target_url, $settings['use_https'])) {
+            echo Response::error(400, "Invalid URL", "Long URL format is invalid.");
+        }
+
+
+        $shortname = $this->slugify($shortname);
+
+        if (empty($shortname)) {
+            $shortname = Str::random(6);
+        }
+
+
+        $link_data = [
+            "shortname" => $shortname,
+            "domain_id" => $domain_id,
+            "target_url" => $target_url,
+            "settings" => [
+                "use_https" => $settings['use_https'],
+            ],
+            "admin" => [
+                "enabled" => $admin['enabled'],
+                "password" => $admin['password'],
+            ],
+            "protection" =>  [
+                "enabled" => $protection['enabled'],
+                "password" => $protection['password'],
+            ],
+            "preview" => [
+                "enabled" => $preview['enabled'],
+                "note" => $preview['note'],
+            ],
+        ];
+
+        $this->saveFile($link_data);
+    }
+
+
     public function read($domainId, $shortname)
     {
 
@@ -11,11 +80,12 @@ class Shortlink
         else return false;
     }
 
+
     protected function saveFile(array $link_data)
     {
 
         if (empty($link_data)) {
-            Response::error(500, 'Internal Server Error', 'An error occured, try again later.');
+            echo Response::error(500, 'Internal Server Error', 'An error occured, try again later.');
         }
 
         $shortname = $link_data['shortname'];
