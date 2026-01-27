@@ -36,7 +36,7 @@ class Shortlink
             exit;
         }
 
-        if (!$target_url = $this->formatUrl($target_url, $settings['use_https'])) {
+        if (!$target_url = $this->formatUrl($target_url)) {
             echo Response::error(400, "Invalid URL", "Long URL format is invalid.");
             exit;
         }
@@ -142,7 +142,7 @@ class Shortlink
     }
 
 
-    protected function formatUrl(string $rawUrl, bool $useHttps): string
+    protected function formatUrl(string $rawUrl): string
     {
 
         $domain = preg_replace('#^https?://#i', '', trim($rawUrl));
@@ -171,7 +171,8 @@ class Shortlink
         // }
         //
 
-        if (!filter_var($domain, FILTER_VALIDATE_URL)) {
+        $urlForValidate = 'https://' . $domain;
+        if (!filter_var($urlForValidate, FILTER_VALIDATE_URL)) {
             return false;
         }
 
