@@ -2,8 +2,19 @@
 
 class Shortlink
 {
+    
+    public function read($domainId, $shortname)
+    {
+
+        $file_path = ROOTDIR . CONFIG['links_dir'] . "$domainId/$shortname.json";
+        if (file_exists($file_path)) return $data = file_get_contents($file_path);
+        else return false;
+    }
+
+
     protected function slugify($text, $divider = '-')
     {
+
         $text = mb_convert_encoding($text, 'UTF-8', mb_detect_encoding($text));
 
         if (function_exists('iconv')) {
@@ -23,9 +34,10 @@ class Shortlink
         return $text;
     }
 
-    
+
     protected function formatUrl(string $rawUrl, bool $useHttps): string
     {
+
         $domain = preg_replace('#^https?://#i', '', trim($rawUrl));
 
         if (strpos($domain, '.') === false) { // must contain a period
