@@ -3,7 +3,7 @@
 class Response
 {
 
-    public static function error(int $code = 500, string $message, string $details)
+    public static function error(int $code, string $message, string $details)
     {
 
         http_response_code($code);
