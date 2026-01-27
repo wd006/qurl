@@ -17,12 +17,12 @@ class Shortlink
 
         $admin = $input['admin'] ?? [];
         $admin['enabled'] = $admin['enabled'] ?? false;
-        $admin['password'] = Security::hasher($admin['password']) ?? null;
+        $admin['password'] = !empty($admin['password']) ? Security::hasher($admin['password']) : null;
 
 
         $protection = $input['protection'] ?? [];
         $protection['enabled'] = $protection['enabled'] ?? false;
-        $protection['password'] = Security::hasher($protection['password']) ?? null;
+        $protection['password'] = !empty($protection['password']) ? Security::hasher($protection['password']) : null;
 
 
         $preview = $input['preview'] ?? [];
@@ -33,10 +33,12 @@ class Shortlink
 
         if (empty($target_url)) {
             echo Response::error(400, "Missing Parameter", "Long URL can't be blank.");
+            exit;
         }
 
         if (!$target_url = $this->formatUrl($target_url, $settings['use_https'])) {
             echo Response::error(400, "Invalid URL", "Long URL format is invalid.");
+            exit;
         }
 
 
@@ -86,6 +88,7 @@ class Shortlink
 
         if (empty($link_data)) {
             echo Response::error(500, 'Internal Server Error', 'An error occured, try again later.');
+            exit;
         }
 
         $shortname = $link_data['shortname'];
@@ -95,6 +98,7 @@ class Shortlink
         if (!is_dir($directory)) {
             if (!@mkdir($directory, 0755, true)) {
                 echo Response::error(500, "Critical Error", "Permission denied to create directory: $directory");
+                exit;
             }
         }
 
@@ -102,13 +106,16 @@ class Shortlink
 
         if ($this->read($domain_id, $shortname)) {
             echo Response::error(409, "Shortlink Conflict", "$shortname is exist.");
+            exit;
         }
 
         if (file_put_contents($file_path, json_encode($link_data, JSON_PRETTY_PRINT)) === false) {
             echo Response::error(500, "Critical Error", "Permission denied to write file: $file_path");
+            exit;
         }
 
         echo Response::success(201, $link_data);
+        exit;
     }
 
 
