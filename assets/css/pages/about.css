@@ -1,0 +1,74 @@
+/* about page */
+
+/* Introduction Paragraph */
+.prose-content .intro-paragraph {
+    font-size: 1.15rem;
+    line-height: 1.7;
+    color: #ccc;
+    margin-bottom: 30px;
+}
+
+/* Main Titles */
+.prose-content h2 {
+    font-size: 1.3rem;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+/* Sub Titles */
+.prose-content h3 {
+    font-size: 1.1rem;
+    color: #3b82f6;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.prose-content p,
+.prose-content li {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #bbb;
+}
+
+.prose-content ul {
+    list-style-type: '✓ ';
+    padding-left: 20px;
+}
+
+.prose-content li {
+    margin-bottom: 10px;
+}
+
+.prose-content dl {
+    margin-top: 20px;
+}
+
+.prose-content dt {
+    font-weight: bold;
+    color: #fff;
+    font-size: 1rem;
+    margin-top: 20px;
+}
+
+.prose-content dd {
+    margin-left: 0;
+    margin-top: 5px;
+    padding-left: 20px;
+    border-left: 3px solid #333;
+    color: #aaa;
+}
+
+.prose-content code {
+    background-color: #333;
+    padding: 2px 5px;
+    border-radius: 4px;
+    font-family: monospace;
+    font-size: 0.9rem;
+}
+
+.prose-content hr {
+    border: 0;
+    height: 1px;
+    background-color: #333;
+    margin: 20px 0;
+}
