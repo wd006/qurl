@@ -8,6 +8,7 @@
             "url_aliases": [ "/home", "/index" ],
             "file": "/views/pages/home.php",
             "controller": "/src/controllers/home.php",
+            "style": ["pages/general"],
             "layout": "default",
             "order": 1
         },
@@ -19,6 +20,7 @@
             "url_aliases": [],
             "file": "/views/pages/about.php",
             "controller": null,
+            "style": ["pages/general"],
             "layout": "default",
             "order": 2
         },
@@ -28,8 +30,9 @@
             "description": "",
             "url": "/contact",
             "url_aliases": [],
-            "file": "/placeholder.txt",
+            "file": "/views/pages/contact.php",
             "controller": null,
+            "style": ["pages/general"],
             "layout": "default",
             "order": 3
         },
@@ -39,8 +42,9 @@
             "description": "",
             "url": "/providers",
             "url_aliases": [],
-            "file": "/placeholder.txt",
+            "file": "/views/pages/providers.php",
             "controller": null,
+            "style": ["pages/general"],
             "layout": "default",
             "order": 4
         },
@@ -50,8 +54,9 @@
             "description": "",
             "url": "/faq",
             "url_aliases": [],
-            "file": "/placeholder.txt",
+            "file": "/views/pages/faq.php",
             "controller": null,
+            "style": ["pages/general"],
             "layout": "default",
             "order": 5
         },
@@ -61,8 +66,9 @@
             "description": "",
             "url": "/domains",
             "url_aliases": [],
-            "file": "/placeholder.txt",
+            "file": "/views/pages/domains.php",
             "controller": null,
+            "style": ["pages/general"],
             "layout": "default",
             "order": 6
         },
@@ -72,8 +78,9 @@
             "description": "",
             "url": "/privacy",
             "url_aliases": [],
-            "file": "/placeholder.txt",
+            "file": "/views/pages/privacy.php",
             "controller": null,
+            "style": ["pages/general"],
             "layout": "default",
             "order": 7
         },
@@ -83,8 +90,9 @@
             "description": "",
             "url": "/terms",
             "url_aliases": [],
-            "file": "/placeholder.txt",
+            "file": "/views/pages/terms.php",
             "controller": null,
+            "style": ["pages/general"],
             "layout": "default",
             "order": 8
         },
@@ -94,8 +102,9 @@
             "description": "",
             "url": "/services",
             "url_aliases": [],
-            "file": "/placeholder.txt",
+            "file": "/views/pages/services.php",
             "controller": null,
+            "style": ["pages/general"],
             "layout": "default",
             "order": 9
         },
@@ -105,8 +114,9 @@
             "description": "",
             "url": "/blog",
             "url_aliases": [],
-            "file": "/placeholder.txt",
+            "file": "/views/pages/blog.php",
             "controller": null,
+            "style": ["pages/general"],
             "layout": "default",
             "order": 10
         }
