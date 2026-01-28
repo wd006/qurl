@@ -46,4 +46,17 @@ class Domain
         }
         return $activeList;
     }
+
+
+    public function getDefault()
+    {
+        foreach ($this->data as $domain) {
+            if (!empty($domain['is_default'])) {
+                return $domain;
+            }
+        }
+
+        $actives = $this->getActiveList();
+        return $actives[0] ?? null;
+    }
 }
