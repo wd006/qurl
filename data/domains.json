@@ -1,0 +1,185 @@
+{
+
+  "0": {
+    "id": 0,
+    "name": "qurl.pp.ua",
+    "is_active": true,
+    "is_default": true,
+    "is_free": true,
+    "status": "online",
+    "status_message": "All systems operational.",
+    "category": "general",
+    "tags": ["brand", "official"],
+    "notes": "Main brand domain.",
+    "added_at": "2026-01-28T00:00:00Z"
+  },
+
+  "1": {
+    "id": 1,
+    "name": "lnk.page.gd",
+    "is_active": true,
+    "is_default": false,
+    "is_free": true,
+    "status": "online",
+    "status_message": "All systems operational.",
+    "category": "general",
+    "tags": ["link", "short"],
+    "notes": "Alternative domain.",
+    "added_at": "2026-01-28T00:00:00Z"
+  },
+
+  "2": {
+    "id": 2,
+    "name": "qrl.rf.gd",
+    "is_active": true,
+    "is_default": false,
+    "is_free": true,
+    "status": "online",
+    "status_message": "All systems operational.",
+    "category": "general",
+    "tags": ["link", "short"],
+    "notes": "Alternative domain.",
+    "added_at": "2026-01-28T00:00:00Z"
+  },
+
+  "3": {
+    "id": 3,
+    "name": "qrl.ct.ws",
+    "is_active": true,
+    "is_default": false,
+    "is_free": true,
+    "status": "online",
+    "status_message": "All systems operational.",
+    "category": "general",
+    "tags": ["link", "short"],
+    "notes": "Alternative domain.",
+    "added_at": "2026-01-28T00:00:00Z"
+  },
+
+  "4": {
+    "id": 4,
+    "name": "qrl.fwh.is",
+    "is_active": true,
+    "is_default": false,
+    "is_free": true,
+    "status": "online",
+    "status_message": "All systems operational.",
+    "category": "general",
+    "tags": ["link", "short"],
+    "notes": "Alternative domain.",
+    "added_at": "2026-01-28T00:00:00Z"
+  },
+
+  "5": {
+    "id": 5,
+    "name": "qrl.gt.tc",
+    "is_active": true,
+    "is_default": false,
+    "is_free": true,
+    "status": "online",
+    "status_message": "All systems operational.",
+    "category": "general",
+    "tags": ["link", "short"],
+    "notes": "Alternative domain.",
+    "added_at": "2026-01-28T00:00:00Z"
+  },
+
+  "6": {
+    "id": 6,
+    "name": "qrl.page.gd",
+    "is_active": true,
+    "is_default": false,
+    "is_free": true,
+    "status": "online",
+    "status_message": "All systems operational.",
+    "category": "general",
+    "tags": ["link", "short"],
+    "notes": "Alternative domain.",
+    "added_at": "2026-01-28T00:00:00Z"
+  },
+
+  "7": {
+    "id": 7,
+    "name": "qrl.xo.je",
+    "is_active": true,
+    "is_default": false,
+    "is_free": true,
+    "status": "online",
+    "status_message": "All systems operational.",
+    "category": "general",
+    "tags": ["link", "short"],
+    "notes": "Alternative domain.",
+    "added_at": "2026-01-28T00:00:00Z"
+  },
+
+  "8": {
+    "id": 8,
+    "name": "qurl.ct.ws",
+    "is_active": true,
+    "is_default": false,
+    "is_free": true,
+    "status": "online",
+    "status_message": "All systems operational.",
+    "category": "general",
+    "tags": ["link", "short"],
+    "notes": "Alternative domain.",
+    "added_at": "2026-01-28T00:00:00Z"
+  },
+
+  "9": {
+    "id": 9,
+    "name": "qurl.gt.tc",
+    "is_active": true,
+    "is_default": false,
+    "is_free": true,
+    "status": "online",
+    "status_message": "All systems operational.",
+    "category": "general",
+    "tags": ["link", "short"],
+    "notes": "Alternative domain.",
+    "added_at": "2026-01-28T00:00:00Z"
+  },
+
+  "10": {
+    "id": 10,
+    "name": "qurl.page.gd",
+    "is_active": true,
+    "is_default": false,
+    "is_free": true,
+    "status": "online",
+    "status_message": "All systems operational.",
+    "category": "general",
+    "tags": ["link", "short"],
+    "notes": "Alternative domain.",
+    "added_at": "2026-01-28T00:00:00Z"
+  },
+
+  "11": {
+    "id": 11,
+    "name": "qurl.rf.gd",
+    "is_active": true,
+    "is_default": false,
+    "is_free": true,
+    "status": "online",
+    "status_message": "All systems operational.",
+    "category": "general",
+    "tags": ["link", "short"],
+    "notes": "Alternative domain.",
+    "added_at": "2026-01-28T00:00:00Z"
+  },
+
+  "12": {
+    "id": 12,
+    "name": "qurl.xo.je",
+    "is_active": true,
+    "is_default": false,
+    "is_free": true,
+    "status": "online",
+    "status_message": "All systems operational.",
+    "category": "general",
+    "tags": ["link", "short"],
+    "notes": "Alternative domain.",
+    "added_at": "2026-01-28T00:00:00Z"
+  }
+  
+}
