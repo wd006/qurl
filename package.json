@@ -1,6 +1,6 @@
 {
   "name": "qurl",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "A privacy-focused, fast, and secure URL shortening and management service.",
   "main": "index.js",
   "scripts": {
