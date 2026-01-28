@@ -20,4 +20,14 @@ class Domain
             }
         }
     }
+
+    public function getAll(): array
+    {
+        return $this->data;
+    }
+
+    public function getById(int $id)
+    {
+        return $this->data[$id] ?? false;
+    }
 }
