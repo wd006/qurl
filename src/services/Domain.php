@@ -59,4 +59,17 @@ class Domain
         $actives = $this->getActiveList();
         return $actives[0] ?? null;
     }
+
+    public function isAvailable(int $id): bool
+    {
+        $domain = $this->getById($id);
+
+        if (!$domain) return false;
+
+        if (!empty($domain['is_active']) && $domain['status'] === 'online') {
+            return true;
+        }
+
+        return false;
+    }
 }
