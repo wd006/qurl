@@ -11,15 +11,9 @@
             <?= CONFIG['slogan'] ?>
         </p>
 
-        <div>
-            <a href="javascript:history.back()" style="font-size:smaller; text-align:left; color:orange; text-decoration: none;">
-                ← Go Back
-            </a>
+        <div class="page header">
+            <h3><?= htmlspecialchars($page['header']) ?></h3>
         </div>
-
-        <h3 class="page-header">
-            <?= htmlspecialchars($page['header']) ?>
-        </h3>
         <hr>
 
         <?php require $viewFile; ?>
