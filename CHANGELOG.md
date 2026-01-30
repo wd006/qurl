@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.2.0](https://github.com/wd006/qurl/compare/v0.1.0...v0.2.0) (2026-01-30)
+
+
+### Features
+
+* **assets:** create the main CSS file ([7272a28](https://github.com/wd006/qurl/commit/7272a2825efc52247aac96bed328aebf841e4d5e))
+* **controllers:** create home controller ([8874aaa](https://github.com/wd006/qurl/commit/8874aaa35b824da4ce3c7ea6ebffa6eb12465ed3))
+* **data:** update pages for new styles ([c0cc1b9](https://github.com/wd006/qurl/commit/c0cc1b951fad6abe3dace42ed87344de32106829))
+* **layouts:** update default layout ([25b7187](https://github.com/wd006/qurl/commit/25b7187f83dec5c354ddc4b384722b2e19b77b55))
+* **layouts:** update the default layout ([f666f4c](https://github.com/wd006/qurl/commit/f666f4cc17ae6e9a490d5c80d390a3bf02e191df))
+* **pages:** CSS refactoring and design improvements ([#13](https://github.com/wd006/qurl/issues/13)) ([24af7fd](https://github.com/wd006/qurl/commit/24af7fd6d4bdcbd2856044e2a4a92ff2e61699c0))
+* **pages:** improve styles for pages ([a195df1](https://github.com/wd006/qurl/commit/a195df1c1a7c57affba7cae2610a431797cf1870))
+* **partials:** add advanced settings part ([07b31f9](https://github.com/wd006/qurl/commit/07b31f930d6c5bb8a2f6bb0316fe6033f050843f))
+* **partials:** add styles for settings partial ([9a26215](https://github.com/wd006/qurl/commit/9a2621592f49cfd31a07f8668b689365f242c942))
+* **ui:** add ssl-toggle.js ([9315dc4](https://github.com/wd006/qurl/commit/9315dc40dd452aa3881424b7c52eb919995c9498))
+* **ui:** create the shortener UI ([fb7f23b](https://github.com/wd006/qurl/commit/fb7f23b7f64123a4089bb40f2cff2e030284599b))
+* **ui:** implement shortener UI ([#12](https://github.com/wd006/qurl/issues/12)) ([ddaa828](https://github.com/wd006/qurl/commit/ddaa82889d59c3318d6c1beb810fd4f1a9e7d548))
+* **ui:** improve UI design ([4c965f0](https://github.com/wd006/qurl/commit/4c965f040b27a5cf3609bdab28a2cd5ea8cd34ce))
+
 ## 0.1.0 (2026-01-28)
 
 
