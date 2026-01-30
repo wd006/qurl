@@ -1,112 +1,106 @@
-   /* FAQ PAGE STYLING */
-   .faq-wrapper {
-       max-width: 800px;
-       margin: 0 auto;
-       padding-bottom: 20px;
-   }
+.faq-page {
+    max-width: 800px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+}
 
-   /* Titles */
-   .faq-category h3 {
-       color: #3b82f6;
-       font-size: 1.4rem;
-       margin-top: 40px;
-       margin-bottom: 15px;
-       border-bottom: 1px solid #333;
-       padding-bottom: 10px;
-   }
+.faq-page__title {
+    color: var(--color-primary);
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--border-color);
+}
 
-   /* Card (Details) */
-   .faq-item {
-       background-color: #1e1e1e;
-       border: 1px solid #333;
-       border-radius: 8px;
-       margin-bottom: 12px;
-       overflow: hidden;
-       transition: border-color 0.3s ease, box-shadow 0.3s ease;
-   }
+.faq-page__category {
+    margin-top: 2.5rem;
+}
 
-   .faq-item:hover {
-       border-color: #444;
-   }
+.accordion__item {
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    margin-bottom: 0.75rem;
+    overflow: hidden;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
 
-   .faq-item[open] {
-       border-color: #3b82f6;
-       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-   }
+.accordion__item:hover {
+    border-color: var(--bg-element-hover);
+}
 
-   /* Question (Summary) */
-   .faq-item summary {
-       list-style: none;
-       /* Hide default arrow */
-       padding: 18px 20px;
-       cursor: pointer;
-       font-weight: 600;
-       color: #eee;
-       font-size: 1.05rem;
-       display: flex;
-       justify-content: space-between;
-       align-items: center;
-       user-select: none;
-       transition: background-color 0.2s;
-   }
+.accordion__item[open] {
+    border-color: var(--color-primary);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
 
-   /* Hide default arrow for webkit browsers */
-   .faq-item summary::-webkit-details-marker {
-       display: none;
-   }
+.accordion__summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 20px;
+    cursor: pointer;
+    list-style: none;
+    user-select: none;
+    font-weight: 600;
+    font-size: 1.05rem;
+    color: var(--text-main);
+    transition: background-color 0.2s;
+}
 
-   .faq-item summary:hover {
-       background-color: #252525;
-   }
+.accordion__summary::-webkit-details-marker {
+    display: none;
+}
 
-   .faq-item summary::after {
-       content: '+';
-       /* custom arrow (+) */
-       font-size: 1.5rem;
-       color: #666;
-       font-weight: normal;
-       transition: transform 0.3s ease, color 0.3s ease;
-       line-height: 1;
-   }
+.accordion__summary:hover {
+    background-color: var(--bg-element);
+}
 
-   .faq-item[open] summary::after {
-       transform: rotate(45deg);
-       /* + -> x */
-       color: #3b82f6;
-   }
+.accordion__summary::after {
+    content: '+';
+    font-size: 1.5rem;
+    font-weight: 300;
+    line-height: 1;
+    color: var(--text-muted);
+    transition: transform 0.3s ease, color 0.3s ease;
+}
 
-   /* Answer */
-   .faq-content {
-       padding: 0 20px 20px 20px;
-       color: #bbb;
-       font-size: 0.95rem;
-       line-height: 1.6;
-       border-top: 1px solid transparent;
-   }
+.accordion__item[open] .accordion__summary::after {
+    transform: rotate(45deg);
+    color: var(--color-primary);
+}
 
-   .faq-item[open] .faq-content {
-       border-top-color: #333;
-       padding-top: 15px;
-       animation: fadeIn 0.3s ease-in-out;
-   }
+.accordion__content {
+    padding: 0 20px 20px 20px;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--text-muted);
+    border-top: 1px solid transparent;
+}
 
-   .faq-content a {
-       color: #3b82f6;
-       text-decoration: none;
-   }
+.accordion__item[open] .accordion__content {
+    border-top-color: var(--border-color);
+    padding-top: 15px;
+    animation: fadeIn 0.3s ease-in-out;
+}
 
-   .faq-content a:hover {
-       text-decoration: underline;
-   }
+.accordion__content a {
+    color: var(--color-primary);
+    text-decoration: none;
+}
 
-   @keyframes fadeIn {
-       from {
-           opacity: 0;
-           transform: translateY(-5px);
-       }
+.accordion__content a:hover {
+    text-decoration: underline;
+}
 
-       to {
-           opacity: 1;
-           transform: translateY(0);
-       }
-   }
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

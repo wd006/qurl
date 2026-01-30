@@ -1,4 +1,4 @@
-<!-- 1. Encryption Setting (Highlighted) -->
+<!-- 1. Encryption Setting -->
 <div class="setting-card setting-card--highlight">
     <div class="setting-card__header">
         <span class="setting-card__title">Encryption</span>

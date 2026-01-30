@@ -8,7 +8,7 @@
             "url_aliases": [ "/home", "/index" ],
             "file": "/views/pages/home.php",
             "controller": "/src/controllers/home.php",
-            "style": ["pages/general"],
+            "style": ["pages/advanced-settings", "pages/home"],
             "layout": "default",
             "order": 1
         },
@@ -56,7 +56,7 @@
             "url_aliases": [],
             "file": "/views/pages/faq.php",
             "controller": null,
-            "style": ["pages/general"],
+            "style": ["pages/general", "pages/faq"],
             "layout": "default",
             "order": 5
         },
