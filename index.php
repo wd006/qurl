@@ -25,7 +25,7 @@ $handler = new LinkHandler($currentUrl);
 $result = $handler->getResult();
 
 
-if (empty($result['shortname'])) {
+if (empty($result['alias'])) {
     // http_response_code(404);
     // exit;
     null;
@@ -34,19 +34,19 @@ if (empty($result['shortname'])) {
 switch ($result['mode']) {
     case 'stats':
         echo "<h1>Link Stats</h1>";
-        echo "Link: " . $result['shortname'] . "<br>";
+        echo "Link: " . $result['alias'] . "<br>";
         echo "Domain ID: " . $result['domain_id'];
         break;
 
     case 'preview':
         echo "<h1>Link Preview</h1>";
-        echo "Link: " . $result['shortname'] . "<br>";
+        echo "Link: " . $result['alias'] . "<br>";
         echo "Domain ID: " . $result['domain_id'];
         break;
 
     case 'redirect':
         echo "<h1>Redirect</h1>";
-        echo "Link: " . $result['shortname'] . "<br>";
+        echo "Link: " . $result['alias'] . "<br>";
         echo "Domain ID: " . $result['domain_id'];
         break;
 
