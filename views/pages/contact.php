@@ -6,7 +6,7 @@
 
     <section class="page-content__section">
         <h3>Report Abuse</h3>
-        <p>If you have found a short link on our service that violates our Terms of Service, please report it immediately. When reporting an abusive link, please include the <b>full short URL ( e.g., <code><?= CONFIG['domain'] ?>/shortname</code> )</b> in your message.</p>
+        <p>If you have found a short link on our service that violates our Terms of Service, please report it immediately. When reporting an abusive link, please include the <b>full short URL ( e.g., <code><?= CONFIG['domain'] ?>/abc123</code> )</b> in your message.</p>
         <p>
             <strong>Email:</strong>
             <a href="mailto:<?= CONFIG['report_email'] ?>"><?= CONFIG['report_email'] ?></a>
