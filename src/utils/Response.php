@@ -2,33 +2,33 @@
 
 class Response
 {
-
-    public static function error(int $code, string $message, string $details)
+    public static function error(int $code, string $message, string $details = null): string
     {
-
         http_response_code($code);
         header('Content-Type: application/json; charset=utf-8');
 
-        return json_encode([
+        $response = [
             "status" => "error",
-            "error" => [
-                "code" => $code,
-                "message" => $message,
-                "details" => $details
-            ]
-        ], JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
+            "code"   => $code,
+            "message" => $message,
+            "details" => $details
+        ];
+
+        return json_encode($response, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
     }
 
-
-    public static function success(int $code = 200, array $data = [])
+    public static function success(int $code, string $message, array $data = []): string
     {
         http_response_code($code);
         header('Content-Type: application/json; charset=utf-8');
 
-        return json_encode([
+        $response = [
             "status" => "success",
             "code"   => $code,
+            "message" => $message,
             "data"   => $data
-        ], JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
+        ];
+
+        return json_encode($response, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
     }
 }
