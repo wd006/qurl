@@ -39,3 +39,20 @@ function loadEnv($path)
     }
     return true;
 }
+
+/**
+ * Tooltip Component
+ * Creates a hoverable/clickable question mark icon with a tooltip.
+ *
+ * @param string $text The tooltip description text.
+ * @return string HTML output.
+ */
+function tooltip(string $text): string
+{
+    $safeText = htmlspecialchars($text, ENT_QUOTES, 'UTF-8');
+
+    return sprintf(
+        '<span class="tooltip" data-tooltip="%s" onclick="event.preventDefault()" tabindex="0">?</span>',
+        $safeText
+    );
+}
