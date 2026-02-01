@@ -45,7 +45,6 @@
     transform: rotate(180deg);
 }
 
-/* --- Modal (Popup) Kısmı --- */
 .settings-popup {
     position: absolute;
     top: calc(100% + 15px);
@@ -54,7 +53,7 @@
     width: 340px;
     max-height: 400px;
     overflow-y: auto;
-
+    overflow-x: hidden;
     background-color: var(--bg-surface);
     border: 1px solid var(--border-highlight);
     box-shadow: var(--shadow-strong);
@@ -154,7 +153,6 @@
     display: block;
 }
 
-/* Input Reveal */
 .setting-input {
     width: 100%;
     background-color: var(--bg-surface);
