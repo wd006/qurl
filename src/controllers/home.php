@@ -1,5 +1,4 @@
 <?php
-$domainService = new Domain();
-$domain_list = $domainService->getActiveList();
-$domain_default = $domainService->getDefault();
+$domain_list = Domain::getActiveList();
+$domain_default = Domain::getDefault();
 ?>
