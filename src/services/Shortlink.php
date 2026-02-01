@@ -29,6 +29,13 @@ class Shortlink
         $preview['enabled'] = isset($preview['enabled']) ? true : false;
         $preview['note'] = $preview['note'] ?? null;
 
+        $meta = [];
+        $meta['full_domain'] = (Domain::getById((int)$domain_id)['name']);
+        $meta['creator_ip_hash'] = Security::getIpHash() ?? 'unknown';
+        $meta['alias_type'] = empty($alias) ? 'random' : 'custom';
+        $meta['alias_original'] = $alias ?? null;
+        $meta['timestamp'] = gmdate('c');
+
 
 
         if (empty($target_url)) {
@@ -69,6 +76,7 @@ class Shortlink
                 "enabled" => $preview['enabled'],
                 "note" => $preview['note'],
             ],
+            "meta" => $meta,
         ];
 
         $this->saveFile($link_data);
@@ -81,6 +89,26 @@ class Shortlink
         $file_path = ROOTDIR . CONFIG['links_dir'] . "$domainId/$alias.json";
         if (file_exists($file_path)) return $data = file_get_contents($file_path);
         else return false;
+    }
+
+    public function countAll(): int
+    {
+        $directory = CONFIG['links_dir'];
+        if (!is_dir($directory)) return 0;
+
+        $iterator = new RecursiveIteratorIterator(
+            new RecursiveDirectoryIterator($directory, RecursiveDirectoryIterator::SKIP_DOTS),
+            RecursiveIteratorIterator::SELF_FIRST
+        );
+
+        $fileCount = 0;
+        foreach ($iterator as $item) {
+            if ($item->isFile()) {
+                $fileCount++;
+            }
+        }
+
+        return $fileCount;
     }
 
 

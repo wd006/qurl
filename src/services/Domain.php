@@ -2,44 +2,42 @@
 
 class Domain
 {
-    protected $data = [];
-
-
-    public function __construct()
+    protected static $data = null;
+    private function __construct() {}
+    protected static function load()
     {
-        $this->load();
-    }
+        if (self::$data !== null) {
+            return;
+        }
 
-
-    protected function load()
-    {
         $dataDir = ROOTDIR . '/data/domains.json';
+        self::$data = [];
 
         if (file_exists($dataDir)) {
             $dataContent = file_get_contents($dataDir);
             if ($decoded = json_decode($dataContent, true)) {
-                $this->data = $decoded;
+                self::$data = $decoded;
             }
         }
     }
 
-
-    public function getAll(): array
+    public static function getAll(): array
     {
-        return $this->data;
+        self::load();
+        return self::$data;
     }
 
-
-    public function getById(int $id)
+    public static function getById(int $id)
     {
-        return $this->data[$id] ?? false;
+        self::load();
+        return self::$data["$id"] ?? false;
     }
 
-
-    public function getActiveList(): array
+    public static function getActiveList(): array
     {
+        self::load();
         $activeList = [];
-        foreach ($this->data as $domain) {
+        foreach (self::$data as $domain) {
             if (!empty($domain['is_active'])) {
                 $activeList[] = $domain;
             }
@@ -47,22 +45,23 @@ class Domain
         return $activeList;
     }
 
-
-    public function getDefault()
+    public static function getDefault()
     {
-        foreach ($this->data as $domain) {
+        self::load();
+        foreach (self::$data as $domain) {
             if (!empty($domain['is_default'])) {
                 return $domain;
             }
         }
 
-        $actives = $this->getActiveList();
+        $actives = self::getActiveList();
         return $actives[0] ?? null;
     }
 
-    public function isAvailable(int $id): bool
+    public static function isAvailable(int $id): bool
     {
-        $domain = $this->getById($id);
+        self::load();
+        $domain = self::getById($id);
 
         if (!$domain) return false;
 
