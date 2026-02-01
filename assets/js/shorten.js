@@ -92,7 +92,7 @@ function prepareSuccessContent(data) {
     const container = document.createElement('div');
     container.appendChild(clone);
 
-    const fullLink = data.full_url || `${window.location.origin}/${data.alias}`;
+    const fullLink = `${data.meta.full_domain}/${data.alias}` || `${window.location.origin}/${data.alias}`;
     const inputEl = container.querySelector('.js-short-url');
     const copyBtn = container.querySelector('.js-copy-btn');
     const tipSection = container.querySelector('.js-tip-section');
