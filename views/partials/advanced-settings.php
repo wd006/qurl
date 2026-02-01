@@ -17,7 +17,7 @@
 <!-- 2. Manage Link Setting -->
 <div class="setting-card">
     <label class="checkbox-label">
-        <input type="checkbox" name="admin[enabled]" value="true">
+        <input type="checkbox" name="admin[enabled]">
         <span class="checkbox-custom"></span>
         <span>Enable Link Management</span>
     </label>
@@ -29,7 +29,7 @@
 <!-- 3. Password Protection Setting -->
 <div class="setting-card">
     <label class="checkbox-label">
-        <input type="checkbox" name="protection[enabled]" value="true">
+        <input type="checkbox" name="protection[enabled]">
         <span class="checkbox-custom"></span>
         <span>Password Protect Link</span>
     </label>
@@ -41,7 +41,7 @@
 <!-- 4. Info Page / Preview Setting -->
 <div class="setting-card">
     <label class="checkbox-label">
-        <input type="checkbox" name="preview[enabled]" value="true">
+        <input type="checkbox" name="preview[enabled]">
         <span class="checkbox-custom"></span>
         <span>Show Info Before Redirect</span>
     </label>

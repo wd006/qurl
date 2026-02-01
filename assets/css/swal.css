@@ -1,0 +1,129 @@
+.tiny-swal-popup {
+    background-color: var(--bg-element) !important;
+    border: 1px solid #374151;
+    border-radius: var(--radius-lg) !important;
+    width: 360px !important;
+    padding: 1.5rem !important;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 10px 10px -5px rgba(0, 0, 0, 0.4) !important;
+}
+
+.tiny-swal-title {
+    color: var(--text-main) !important;
+    font-size: 1.25rem !important;
+    font-weight: 600 !important;
+    margin-bottom: 0.5rem !important;
+}
+
+.tiny-swal-content {
+    color: #9ca3af !important;
+    font-size: 0.95rem !important;
+}
+
+.tiny-swal-btn {
+    background-color: var(--color-primary);
+    color: var(--text-main);
+    font-weight: 500;
+    padding: 0.6rem 1.5rem;
+    border-radius: var(--radius-md);
+    border: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+    margin-top: 1rem;
+    outline: none;
+}
+
+.tiny-swal-btn:hover {
+    background-color: var(--color-primary-hover);
+}
+
+.tiny-swal-btn:focus {
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.4);
+}
+
+
+.link-label {
+    text-align: left;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    margin-bottom: 8px;
+    margin-top: 5px;
+}
+
+.link-result-wrapper {
+    display: flex;
+    align-items: center;
+    background: var(--color-primary-dark);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 4px;
+    position: relative;
+    transition: border-color 0.2s;
+}
+
+.link-result-wrapper:hover { /* onclick -> :focus-within */
+    border-color: var(--color-primary-neon);
+}
+
+.link-input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    color: var(--color-primary-neon);
+    padding: 8px 5px;
+    font-size: 0.75rem;
+    font-family: monospace;
+    outline: none;
+    width: 100%;
+}
+
+.copy-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #374151;
+    color: var(--text-main);
+    border: none;
+    border-radius: var(--radius-md);
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-right: 2px;
+}
+
+.copy-btn:hover {
+    background-color: var(--bg-element-hover);
+    color: #ffffff;
+}
+
+.copy-btn svg {
+    width: 20px;
+    height: 20px;
+}
+
+.copy-btn.copied {
+    background-color: #10b981 !important;
+    color: white !important;
+}
+
+.tip-icon {
+    color: var(--tip-color);
+    margin-right: 2px;
+    vertical-align: text-bottom;
+    display: inline-block;
+}
+
+.tip-container {
+    margin-top: 15px;
+    display: flex;
+    align-items: flex-start;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+    text-align: left;
+}
+
+.tip-container strong {
+    color:var(--tip-color);
+}

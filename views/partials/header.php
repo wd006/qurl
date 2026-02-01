@@ -13,6 +13,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/site.webmanifest" />
     <link rel="stylesheet" href="/style.css?v=<?= filemtime((ROOTDIR . '/style.css')); ?>">
+    <link rel="stylesheet" href="/assets/css/swal.css?v=<?= filemtime((ROOTDIR . '/assets/css/swal.css')); ?>">
     <?php foreach ($page['style'] ?? [] as $style) : ?>
         <?php $style_file = "/assets/css/{$style}.css"; ?>
         <?php if (file_exists(ROOTDIR . $style_file)) : ?>
