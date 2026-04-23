@@ -168,6 +168,10 @@
     border-color: var(--color-primary);
 }
 
+.setting-input:disabled {
+    background-color: var(--bg-surface-muted);
+}
+
 .setting-input::placeholder {
     color: #555;
 }
@@ -264,4 +268,23 @@
 .settings-popup::-webkit-scrollbar-thumb {
     background-color: var(--border-color);
     border-radius: 4px;
+}
+
+.input-error {
+    border-color: var(--error-color) !important;
+    box-shadow: 0 0 5px rgba(220, 53, 69, 0.5) !important;
+}
+.text-error {
+    color: var(--error-color) !important;
+    font-weight: bold;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+}
+.shake-anim {
+    animation: shake 0.3s ease-in-out;
 }

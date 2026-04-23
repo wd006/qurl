@@ -9,6 +9,7 @@
     /* == backgrounds == */
     --bg-body: #121212; /* bg */
     --bg-surface: #1E1E1E; /* container */
+    --bg-surface-muted: #2c2c2c; /* input:disabled */
     --bg-element: #27272a; /* input */
     --bg-element-hover: #3f3f46;
 
