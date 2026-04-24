@@ -25,7 +25,7 @@
     </div>
 </footer>
 
-<script src="/assets/js/ssl-toggle.js"></script>
+<script src="/assets/js/advanced-settings.js"></script>
 <script src="/assets/js/shorten.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
